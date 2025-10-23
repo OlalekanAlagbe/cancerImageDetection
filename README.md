@@ -1,9 +1,9 @@
-🧠 Cancer Image Detection with PyTorch
+Cancer Image Detection with PyTorch
 A robust deep learning pipeline for binary classification of cancer-related medical images using PyTorch and transfer learning with ResNet34.This project features full automation of the workflow—from dataset download and augmentation to training, evaluation, and visualization—achieving high performance and strong generalization.
 
-## 🎯 Project Overview
+## Project Overview
 
-This project implements a robust medical image classification system that achieves **85.38% accuracy** on test data with an impressive **ROC AUC of 0.92**. The system uses transfer learning with a pre-trained ResNet34 backbone, fine-tuned specifically for medical image analysis.
+This project implements a robust medical image classification system that achieves **85.38% accuracy** on test data with an impressive **AUC of 0.92**. The system uses transfer learning with a pre-trained ResNet34 backbone, fine-tuned specifically for medical image analysis.
 
 ### Key Achievements
 - **High Performance**: 85.38% test accuracy with 0.92 ROC AUC
@@ -11,7 +11,7 @@ This project implements a robust medical image classification system that achiev
 - **Comprehensive Evaluation**: Multiple metrics and visualizations
 - **Production Ready**: Complete pipeline from data loading to model deployment
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 ### Model Performance Summary
 - **Test Accuracy**: 85.38% (514/602 correct predictions)
@@ -29,7 +29,7 @@ This project implements a robust medical image classification system that achiev
 - **Class 1**: 89,117 images (40.5%)
 - **Class Balance Ratio**: 0.68 (moderately imbalanced)
 
-## 🏗️ Architecture Details
+## Architecture Details
 
 ### Model Architecture
 ```
@@ -49,7 +49,7 @@ ResNet34 Backbone (Pre-trained on ImageNet)
 - **Regularization**: Strategic dropout layers to prevent overfitting
 - **Data Augmentation**: Random flips, rotations, and color jittering
 
-## 📈 Training Analysis
+## Training Analysis
 
 ### Training Configuration
 - **Batch Size**: 32
@@ -70,7 +70,7 @@ The model showed excellent convergence characteristics:
 - **Validation Loss**: Decreased from 0.44 to 0.37 (good generalization)
 - **Overfitting Assessment**: Minimal gap between training and validation curves
 
-## 🔍 Detailed Results Analysis
+## Detailed Results Analysis
 ### Confusion Matrix Insights
 ```
                  Predicted
@@ -96,13 +96,6 @@ The ROC curve demonstrates excellent discriminative performance:
 - **Class 1 Predictions**: ~170 samples (reflects true distribution)
 - **Balanced Output**: Prediction distribution aligns with test set composition
 
-## 🛠️ Technical Implementation
-
-### Data Pipeline
-```python
-Data Loading → Preprocessing → Augmentation → Normalization → Batch Processing
-```
-
 ### Preprocessing Pipeline
 1. **Image Resizing**: 224×224 pixels (ResNet standard)
 2. **Normalization**: ImageNet statistics (mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
@@ -116,7 +109,7 @@ Data Loading → Preprocessing → Augmentation → Normalization → Batch Proc
 - **Validation**: 15% (601 images) 
 - **Testing**: 15% (602 images)
 
-## 📊 Visualizations Generated
+## Visualizations Generated
 1. **Training History Plots**:
 ![Graphs](./training_and_validation_loss_and_accuracy.png)
    - Training vs Validation Loss curves
@@ -140,7 +133,7 @@ The script automatically downloads and extracts the dataset:
 - **Labels**: `labels.csv` (220K+ image labels)
 - **Images**: `data_sample.zip` (sample medical images)
 
-## 💡 Key Insights and Findings
+## Key Insights and Findings
 
 ### 1. Transfer Learning Effectiveness
 - Pre-trained ResNet34 provided excellent feature extraction
@@ -162,11 +155,11 @@ The script automatically downloads and extracts the dataset:
 - **High Specificity**: 92% precision for Class 1 - good for confirming condition
 - **Balanced F1-scores**: Reasonable performance across both classes
 
-## 🎯 Use Cases and Applications
+## Use Cases and Applications
 
 ### Medical Screening
 - **Primary Screening**: High sensitivity for Class 0 makes it suitable for initial screening
-- **Diagnostic Support**: ROC AUC of 0.92 indicates reliable diagnostic assistance
+- **Diagnostic Support**: AUC of 0.92 indicates reliable diagnostic assistance
 - **Workflow Integration**: Fast inference suitable for clinical workflows
 
 ### Research Applications
@@ -174,7 +167,7 @@ The script automatically downloads and extracts the dataset:
 - **Feature Analysis**: Pre-trained features can be analyzed for medical insights
 - **Comparative Studies**: Performance metrics provide comparison baseline
 
-## 🚨 Limitations and Considerations
+## Limitations and Considerations
 
 ### Current Limitations
 1. **Binary Classification**: Limited to two-class problems
@@ -186,13 +179,6 @@ The script automatically downloads and extracts the dataset:
 - **Not for Clinical Diagnosis**: This model is for research/educational purposes
 - **Human Oversight**: Medical professionals should always validate results
 - **Bias Awareness**: Model may inherit biases from training data
-
-## 📚 References and Credits
-
-### Technical References
-- **ResNet Architecture**: He et al., "Deep Residual Learning for Image Recognition"
-- **Transfer Learning**: Yosinski et al., "How transferable are features in deep neural networks?"
-- **Medical AI**: Esteva et al., "A guide to deep learning in healthcare"
 
 ### Libraries Used
 - **PyTorch**: Deep learning framework
