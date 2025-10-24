@@ -86,9 +86,10 @@ The ROC curve demonstrates excellent discriminative performance:
 - **Clinical Relevance**: High AUC suggests reliable diagnostic potential
 
 ### Prediction Distribution
-- **Class 0 Predictions**: ~430 samples (well-distributed)
-- **Class 1 Predictions**: ~170 samples (reflects true distribution)
-- **Balanced Output**: Prediction distribution aligns with test set composition
+- **Predicted Class 0:** 431 samples (≈ 71.6%)
+- **Predicted Class 1:** 171 samples (≈ 28.4%)
+- **Observation:** The model predicts Class 0 more frequently than Class 1, reflecting a mild bias toward the majority class. However, the overall distribution remains reasonable and consistent with the true class proportions.
+
 
 ### Preprocessing Pipeline
 1. **Image Resizing**: 224×224 pixels (ResNet standard)
