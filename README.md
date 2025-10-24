@@ -117,7 +117,6 @@ The ROC curve demonstrates excellent discriminative performance:
 
 2. **Performance Evaluation**:
 ![Graphs](./confusionmatrix_classificationreport_predictiondistribution_roccurve.png)
-   - Confusion Matrix heatmap
    - ROC Curve with AUC score
    - Classification Report table
    - Prediction Distribution histogram
