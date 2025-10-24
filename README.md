@@ -23,12 +23,6 @@ This project implements a robust medical image classification system that achiev
 - **Recall (Class 1)**: 0.68
 - **F1-Score (Class 1)**: 0.78
 
-### Class Distribution
-- **Total Dataset**: 220,025 images
-- **Class 0**: 130,908 images (59.5%)
-- **Class 1**: 89,117 images (40.5%)
-- **Class Balance Ratio**: 0.68 (moderately imbalanced)
-
 ## Architecture Details
 
 ### Model Architecture
@@ -75,7 +69,7 @@ The model showed excellent convergence characteristics:
 ```
                  Predicted
            Class 0    Class 1
-Actual 0    366        13      (96.8% sensitivity for Class 0)
+Actual 0    356        13      (96.8% sensitivity for Class 0)
        1     75       158      (67.8% sensitivity for Class 1)
 ```
 
@@ -102,7 +96,7 @@ The ROC curve demonstrates excellent discriminative performance:
 3. **Data Augmentation**:
    - Random horizontal flips (50% probability)
    - Random rotations (±10 degrees)
-   - Color jittering (brightness, contrast, saturation)
+   - Color jittering (brightness, contrast, saturation)    
 
 ### Dataset Splits
 - **Training**: 70% (2,806 images)
