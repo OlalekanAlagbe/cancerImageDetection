@@ -122,16 +122,6 @@ The ROC curve demonstrates excellent discriminative performance:
    - Classification Report table
    - Prediction Distribution histogram
 
-3. **Data Analysis**:
-![Graphs](./label_distribution.png)
-   - Label distribution bar chart and pie chart
-   - Sample image grid with labels
-
-
-### Dataset Setup
-The script automatically downloads and extracts the dataset:
-- **Labels**: `labels.csv` (220K+ image labels)
-- **Images**: `data_sample.zip` (sample medical images)
 
 ## Key Insights and Findings
 
