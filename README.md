@@ -5,12 +5,6 @@ A robust deep learning pipeline for binary classification of cancer-related medi
 
 This project implements a robust medical image classification system that achieves **85.38% accuracy** on test data with an impressive **AUC of 0.92**. The system uses transfer learning with a pre-trained ResNet34 backbone, fine-tuned specifically for medical image analysis.
 
-### Key Achievements
-- **High Performance**: 85.38% test accuracy with 0.92 ROC AUC
-- **Robust Architecture**: Transfer learning with ResNet34
-- **Comprehensive Evaluation**: Multiple metrics and visualizations
-- **Production Ready**: Complete pipeline from data loading to model deployment
-
 ## Performance Metrics
 
 ### Model Performance Summary
@@ -52,7 +46,7 @@ ResNet34 Backbone (Pre-trained on ImageNet)
 - **Image Size**: 224×224
 - **Trainable Parameters**: 65,922
 
-### Training Progression
+### Training Progression and Convergence Analysis
 The model showed excellent convergence characteristics:
 
 1. **Rapid Initial Learning**: Training accuracy jumped from 68.78% to 74.91% in the first two epochs
