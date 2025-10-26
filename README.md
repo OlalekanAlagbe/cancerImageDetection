@@ -107,8 +107,19 @@ The ROC curve demonstrates excellent discriminative performance:
 ## Visualizations Generated
 1. **Training History Plots**:
 ![Graphs](./training_and_validation_loss_and_accuracy.png)
-   - Training vs Validation Loss curves
-   - Training vs Validation Accuracy curves
+
+### Training History Analysis
+The learning curves demonstrate healthy model convergence and strong generalization:
+- **Training Loss** steadily decreases from 0.59 → 0.47
+- **Validation Loss** decreases from 0.44 → 0.37 (consistently lower than training loss)
+- **Training Accuracy** improves from 68.8% → 77.9%
+- **Validation Accuracy** rises from 82.8% → 86.0%
+
+These trends confirm that:
+- The model **learned effectively without overfitting**.
+- Validation metrics remained **consistently stable**, indicating a well-regularized network.
+- Early improvements were rapid due to **transfer learning**, with fine-tuning producing marginal gains afterward.
+
 
 2. **Performance Evaluation**:
 ![Graphs](./confusionmatrix_classificationreport_predictiondistribution_roccurve.png)
