@@ -46,18 +46,6 @@ ResNet34 Backbone (Pre-trained on ImageNet)
 - **Image Size**: 224×224
 - **Trainable Parameters**: 65,922
 
-### Training Progression and Convergence Analysis
-The model showed excellent convergence characteristics:
-
-1. **Rapid Initial Learning**: Training accuracy jumped from 68.78% to 74.91% in the first two epochs
-2. **Steady Improvement**: Validation accuracy improved from 82.86% to 86.02% over 10 epochs
-3. **Stable Convergence**: Final epochs showed stable performance with minimal overfitting
-
-### Loss Curves Analysis
-- **Training Loss**: Decreased from 0.59 to 0.47 (smooth convergence)
-- **Validation Loss**: Decreased from 0.44 to 0.37 (good generalization)
-- **Overfitting Assessment**: Minimal gap between training and validation curves
-
 ## Detailed Results Analysis
 ### Confusion Matrix Insights
 ```
@@ -98,7 +86,7 @@ The ROC curve demonstrates excellent discriminative performance:
 - **Validation**: 15% (601 images) 
 - **Testing**: 15% (602 images)
 
-## Visualizations Generated
+### Training Progression and Convergence Analysis
 1. **Training History Plots**:
 ![Graphs](./training_and_validation_loss_and_accuracy.png)
 
@@ -112,14 +100,17 @@ The learning curves demonstrate healthy model convergence and strong generalizat
 These trends confirm that:
 - The model **learned effectively without overfitting**.
 - Validation metrics remained **consistently stable**, indicating a well-regularized network.
-- Early improvements were rapid due to **transfer learning**, with fine-tuning producing marginal gains afterward.
+- Training accuracy rose from 68.8% to 74.9% within the first two epochs. Early improvements were rapid due to **transfer learning**, with fine-tuning producing marginal gains afterward.
 
 
 2. **Performance Evaluation**:
 ![Graphs](./confusionmatrix_classificationreport_predictiondistribution_roccurve.png)
-   - ROC Curve with AUC score
-   - Classification Report table
-   - Prediction Distribution histogram
+ 
+ **Key Observations**:
+- **High True Negative Rate**: Excellent at identifying Class 0 (96.8% sensitivity)
+- **Moderate True Positive Rate**: Good performance on Class 1 (67.8% sensitivity)
+- **Low False Positive Rate**: Only 3.4% false positive rate for Class 0
+- **Class Imbalance Impact**: Better performance on majority class (Class 0)
 
 
 ## Key Insights and Findings
